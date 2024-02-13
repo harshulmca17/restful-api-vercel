@@ -1,139 +1,480 @@
 {
-    "questions": [
-      {
-        "question": "Which is the most popular JavaScript framework?",
-        "options": ["Angular", "React", "Svelte", "Vue"],
-        "correctOption": 1,
-        "points": 10
-      },
-      {
-        "question": "Which company invented React?",
-        "options": ["Google", "Apple", "Netflix", "Facebook"],
-        "correctOption": 3,
-        "points": 10
-      },
-      {
-        "question": "What's the fundamental building block of React apps?",
-        "options": ["Components", "Blocks", "Elements", "Effects"],
-        "correctOption": 0,
-        "points": 10
-      },
-      {
-        "question": "What's the name of the syntax we use to describe the UI in React components?",
-        "options": ["FBJ", "Babel", "JSX", "ES2015"],
-        "correctOption": 2,
-        "points": 10
-      },
-      {
-        "question": "How does data flow naturally in React apps?",
-        "options": [
-          "From parents to children",
-          "From children to parents",
-          "Both ways",
-          "The developers decides"
-        ],
-        "correctOption": 0,
-        "points": 10
-      },
-      {
-        "question": "How to pass data into a child component?",
-        "options": ["State", "Props", "PropTypes", "Parameters"],
-        "correctOption": 1,
-        "points": 10
-      },
-      {
-        "question": "When to use derived state?",
-        "options": [
-          "Whenever the state should not trigger a re-render",
-          "Whenever the state can be synchronized with an effect",
-          "Whenever the state should be accessible to all components",
-          "Whenever the state can be computed from another state variable"
-        ],
-        "correctOption": 3,
-        "points": 30
-      },
-      {
-        "question": "What triggers a UI re-render in React?",
-        "options": [
-          "Running an effect",
-          "Passing props",
-          "Updating state",
-          "Adding event listeners to DOM elements"
-        ],
-        "correctOption": 2,
-        "points": 20
-      },
-      {
-        "question": "When do we directly \"touch\" the DOM in React?",
-        "options": [
-          "When we need to listen to an event",
-          "When we need to change the UI",
-          "When we need to add styles",
-          "Almost never"
-        ],
-        "correctOption": 3,
-        "points": 20
-      },
-      {
-        "question": "In what situation do we use a callback to update state?",
-        "options": [
-          "When updating the state will be slow",
-          "When the updated state is very data-intensive",
-          "When the state update should happen faster",
-          "When the new state depends on the previous state"
-        ],
-        "correctOption": 3,
-        "points": 30
-      },
-      {
-        "question": "If we pass a function to useState, when will that function be called?",
-        "options": [
-          "On each re-render",
-          "Each time we update the state",
-          "Only on the initial render",
-          "The first time we update the state"
-        ],
-        "correctOption": 2,
-        "points": 30
-      },
-      {
-        "question": "Which hook to use for an API request on the component's initial render?",
-        "options": ["useState", "useEffect", "useRef", "useReducer"],
-        "correctOption": 1,
-        "points": 10
-      },
-      {
-        "question": "Which variables should go into the useEffect dependency array?",
-        "options": [
-          "Usually none",
-          "All our state variables",
-          "All state and props referenced in the effect",
-          "All variables needed for clean up"
-        ],
-        "correctOption": 2,
-        "points": 30
-      },
-      {
-        "question": "An effect will always run on the initial render.",
-        "options": [
-          "True",
-          "It depends on the dependency array",
-          "False",
-          "In depends on the code in the effect"
-        ],
-        "correctOption": 0,
-        "points": 30
-      },
-      {
-        "question": "When will an effect run if it doesn't have a dependency array?",
-        "options": [
-          "Only when the component mounts",
-          "Only when the component unmounts",
-          "The first time the component re-renders",
-          "Each time the component is re-rendered"
-        ],
-        "correctOption": 3,
-        "points": 20
-      }
-    ]
-  }
+  "questions": [
+    {
+      "question": "Which is the most popular JavaScript framework?",
+      "options": ["Angular", "React", "Svelte", "Vue"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of React Router?",
+      "options": [
+        "To manage state in React components",
+        "To handle routing and navigation in React applications",
+        "To create animated transitions in React components",
+        "To interact with external APIs"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the role of the `componentDidMount` lifecycle method in a React class component?",
+      "options": [
+        "It is called when the component is about to unmount",
+        "It is called after the component has rendered for the first time",
+        "It is called when the component is about to update",
+        "It is called when the component is re-rendered"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What does Redux provide in a React application?",
+      "options": [
+        "A form of CSS-in-JS styling",
+        "A state management solution",
+        "A testing framework for React components",
+        "A build tool for optimizing React applications"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `useReducer` hook in React?",
+      "options": [
+        "To manage component's state",
+        "To handle asynchronous operations",
+        "To create reusable components",
+        "To manage complex state logic in a predictable way"
+      ],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "What is the key difference between controlled and uncontrolled components in React?",
+      "options": [
+        "Controlled components are stateless, while uncontrolled components have internal state",
+        "Controlled components have their state managed by React, while uncontrolled components manage their own state",
+        "Controlled components use class components, while uncontrolled components use functional components",
+        "There is no difference between controlled and uncontrolled components"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `shouldComponentUpdate` method in React?",
+      "options": [
+        "To determine if the component should re-render",
+        "To handle side effects in functional components",
+        "To fetch data from an API",
+        "To manage component's state"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the React DevTools extension used for?",
+      "options": [
+        "To debug JavaScript code outside of the React ecosystem",
+        "To monitor and inspect the React component tree, state, and props",
+        "To write and execute React unit tests",
+        "To optimize the performance of React applications"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which company invented React?",
+      "options": ["Google", "Apple", "Netflix", "Facebook"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "What's the fundamental building block of React apps?",
+      "options": ["Components", "Blocks", "Elements", "Effects"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What's the name of the syntax we use to describe the UI in React components?",
+      "options": ["FBJ", "Babel", "JSX", "ES2015"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "How does data flow naturally in React apps?",
+      "options": [
+        "From parents to children",
+        "From children to parents",
+        "Both ways",
+        "The developers decides"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How to pass data into a child component?",
+      "options": ["State", "Props", "PropTypes", "Parameters"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "When to use derived state?",
+      "options": [
+        "Whenever the state should not trigger a re-render",
+        "Whenever the state can be synchronized with an effect",
+        "Whenever the state should be accessible to all components",
+        "Whenever the state can be computed from another state variable"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "What triggers a UI re-render in React?",
+      "options": [
+        "Running an effect",
+        "Passing props",
+        "Updating state",
+        "Adding event listeners to DOM elements"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "When do we directly \"touch\" the DOM in React?",
+      "options": [
+        "When we need to listen to an event",
+        "When we need to change the UI",
+        "When we need to add styles",
+        "Almost never"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "In what situation do we use a callback to update state?",
+      "options": [
+        "When updating the state will be slow",
+        "When the updated state is very data-intensive",
+        "When the state update should happen faster",
+        "When the new state depends on the previous state"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "If we pass a function to useState, when will that function be called?",
+      "options": [
+        "On each re-render",
+        "Each time we update the state",
+        "Only on the initial render",
+        "The first time we update the state"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "Which hook to use for an API request on the component's initial render?",
+      "options": ["useState", "useEffect", "useRef", "useReducer"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which variables should go into the useEffect dependency array?",
+      "options": [
+        "Usually none",
+        "All our state variables",
+        "All state and props referenced in the effect",
+        "All variables needed for clean up"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "An effect will always run on the initial render.",
+      "options": [
+        "True",
+        "It depends on the dependency array",
+        "False",
+        "In depends on the code in the effect"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "When will an effect run if it doesn't have a dependency array?",
+      "options": [
+        "Only when the component mounts",
+        "Only when the component unmounts",
+        "The first time the component re-renders",
+        "Each time the component is re-rendered"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "What is JSX in React?",
+      "options": [
+        "JavaScript XML",
+        "Java Syntax Extension",
+        "JavaScript Extension",
+        "Java XML"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `useState` hook in React?",
+      "options": [
+        "To fetch data from an API",
+        "To handle component's state",
+        "To create a new component",
+        "To perform side effects"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "In React, what is the purpose of the `map` function?",
+      "options": [
+        "To iterate over an array and transform its elements",
+        "To create a new array with a single element",
+        "To remove elements from an array",
+        "To add elements to an array"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What does the `useEffect` hook do in React?",
+      "options": [
+        "It changes the state of a component",
+        "It performs asynchronous operations",
+        "It handles side effects in functional components",
+        "It creates a new component"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "In React, what is the purpose of the `props` object?",
+      "options": [
+        "To manage component's internal state",
+        "To access the parent component's methods",
+        "To pass data from a parent component to a child component",
+        "To style the component"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "How can you conditionally render content in React?",
+      "options": [
+        "Using the `if` statement",
+        "Using the `else` statement",
+        "Using the `switch` statement",
+        "Using ternary operators and logical operators"
+      ],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `key` attribute when rendering lists in React?",
+      "options": [
+        "To provide a unique identifier for each list item",
+        "To specify the color of each list item",
+        "To control the styling of each list item",
+        "To hide certain list items"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How do you prevent the default behavior of an HTML form in React?",
+      "options": [
+        "By using `e.preventDefault()` in the event handler",
+        "By setting the `disabled` attribute on the form element",
+        "By using `return false` in the event handler",
+        "By using `e.stopPropagation()` in the event handler"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `context` API in React?",
+      "options": [
+        "To manage component's state",
+        "To create reusable components",
+        "To pass data through the component tree without having to pass props down manually at every level",
+        "To handle asynchronous operations"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "In React, what is the significance of the `virtual DOM`?",
+      "options": [
+        "It is a mockup of the actual DOM used for testing",
+        "It is an alternate way to define styles in components",
+        "It is an in-memory representation of the actual DOM elements to improve performance",
+        "It is a new feature introduced in React 18"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `useCallback` hook in React?",
+      "options": [
+        "To create a new component",
+        "To memoize functions and prevent unnecessary re-renders",
+        "To handle asynchronous operations",
+        "To manage component's state"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "In React, what is the role of the `key` prop when rendering a list of elements?",
+      "options": [
+        "To set the font color of each list item",
+        "To provide a unique identifier for each list item",
+        "To control the visibility of each list item",
+        "To determine the size of each list item"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `useMemo` hook in React?",
+      "options": [
+        "To create a new component",
+        "To memoize values and prevent unnecessary re-computations",
+        "To manage component's state",
+        "To handle asynchronous operations"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "In React, what is the significance of the `forwardRef` function?",
+      "options": [
+        "To create a new component",
+        "To pass a ref from a parent component to a child component",
+        "To handle asynchronous operations",
+        "To manage component's state"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "How can you conditionally apply styles in React?",
+      "options": [
+        "By using inline styles with JavaScript objects",
+        "By defining styles in a separate CSS file",
+        "By using the `class` attribute",
+        "By using the `style` attribute with string values"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `dangerouslySetInnerHTML` prop in React?",
+      "options": [
+        "To set the background color of an element",
+        "To insert raw HTML content into a component",
+        "To handle asynchronous operations",
+        "To manage component's state"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `React.Fragment` component in React?",
+      "options": [
+        "To create a new component",
+        "To group multiple elements without adding extra nodes to the DOM",
+        "To handle asynchronous operations",
+        "To manage component's state"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "How can you optimize performance in a React application?",
+      "options": [
+        "By using inline styles",
+        "By avoiding unnecessary re-renders with memoization hooks",
+        "By increasing the component hierarchy depth",
+        "By using a large number of global state variables"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `React.PureComponent` class in React?",
+      "options": [
+        "To create a new component",
+        "To memoize functions",
+        "To handle asynchronous operations",
+        "To perform a shallow comparison of props and state for performance optimization"
+      ],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "In React, what is the role of the `shouldComponentUpdate` lifecycle method?",
+      "options": [
+        "To create a new component",
+        "To handle asynchronous operations",
+        "To determine if a component should re-render",
+        "To memoize values"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "How can you handle forms in React?",
+      "options": [
+        "By using the `form` element",
+        "By using the `input` element",
+        "By using the `useState` hook",
+        "By using the `onChange` event and state management"
+      ],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `React.StrictMode` component?",
+      "options": [
+        "To create a new component",
+        "To enable strict mode for React applications",
+        "To handle asynchronous operations",
+        "To manage component's state"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "How can you prevent the default behavior of a form submit in React?",
+      "options": [
+        "By using the `preventDefault` method in the `onSubmit` event handler",
+        "By using the `defaultPrevented` property in the `onSubmit` event handler",
+        "By using the `stopPropagation` method in the `onSubmit` event handler",
+        "By using the `stopImmediatePropagation` method in the `onSubmit` event handler"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the `React.createRef` method in React?",
+      "options": [
+        "To create a new component",
+        "To create a new reference object",
+        "To handle asynchronous operations",
+        "To manage component's state"
+      ],
+      "correctOption": 1,
+      "points": 10
+    }
+  ]
+}
