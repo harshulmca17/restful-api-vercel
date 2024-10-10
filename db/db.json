@@ -1,5 +1,5 @@
 {
-  "product/fetchNormalisedVariations":{
+  "product":{"fetchNormalisedVariations":{
   "statusCode": 200,
   "msg": "SUCCESS",
   "result": {
@@ -6331,7 +6331,7 @@
 
       ]
       }
-      },
+      }},
   "bulkProductAPI":{
     "statusCode": 200,
     "msg": "SUCCESS",
